@@ -159,3 +159,53 @@ var vowels = function ( string ) {
 };
 
 console.log(vowels("cats are the best creatures on earth"))
+
+
+
+
+
+
+
+// PROBLEM 8
+
+var testArray = ["a","a","cat","cat",1,1]
+
+var testArray2 = ["a","b","b"]
+
+var testArray3 = ["cat","dog",1,9]
+
+
+// TEST WHETHER THE ARRAY IS OF EVEN LENGTH
+var isEven = function ( array ) {
+	if (array.length % 2 === 0 ) {
+		return true
+	}
+	else {
+		return false
+	}
+};
+
+// TEST WHETHER A SINGLE PAIR IS IDENTICAL
+var pairTest = function ( array, num ) {
+
+	if( array[num] === array[num+1]) {
+		return true
+	}
+	else{
+		return false
+		}
+};
+
+// TEST ARRAY CONTAINS ONLY PAIRS OF IDENTICAL VALUES
+var twins = function ( array ) {
+
+}
+
+
+
+
+
+
+
+
+
