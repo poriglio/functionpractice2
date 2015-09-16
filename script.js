@@ -224,10 +224,6 @@ console.log(twins(testArray))
 
 // PROBLEM 9
 
-var booleans1 = [true,true,true,5>2,0===0,1===0]
-var booleans2 = [false,false,false,false]
-var booleans3 = []
-
 // IS THE ARRAY EMPTY?
 var notEmpty = function ( array ) {
 	if ( array.length > 0 ) {
@@ -239,7 +235,7 @@ var notEmpty = function ( array ) {
 }
 
 // DOES THE ARRAY CONTAIN A TRUE?
-var onlyTrue = function ( array ) {	
+var containsTrue = function ( array ) {	
 	for(var i = 0; i < array.length; i++){
 		if(array[i]){
 			return true
@@ -250,5 +246,26 @@ var onlyTrue = function ( array ) {
 	}
 }
 
+// IS THE ARRAY BOTH NOT EMPTY AND ALSO CONTAINING A TRUE?
 
-console.log(onlyTrue(booleans2))
+var or = function ( array ) {
+	if(notEmpty(array)){
+		return containsTrue(array)
+	}
+	else{
+		return false
+	}
+}
+
+var booleans1 = [false,false,true,5>2,0===0,1===0]
+var booleans2 = [false,false,false,false]
+var booleans3 = []
+
+console.log(or(booleans2))
+
+
+
+
+
+
+// PROBLEM 10
