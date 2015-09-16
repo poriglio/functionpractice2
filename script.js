@@ -269,3 +269,37 @@ console.log(or(booleans2))
 
 
 // PROBLEM 10
+
+var friends = ["Melissa", "Shannon", "Danya", "Laura", "Melissa","Laura","Jesse"]
+
+// DETERMINE WHETHER ELEMENT HAS ALREADY APPEARED IN THE ARRAY
+var uniqueSoFar = function ( array, number ) {
+	if(number===0){
+		return true
+	}
+	else{
+		for (var x = 0; x<number; x++){
+			if (array[x]===array[number]){
+				return false
+			}
+			else if ((x===number-1)&&(array[x]!==array[number])){
+				return true
+			}
+		}
+	}
+}
+
+
+// CREATE ARRAY WITH NO REPEAT VALUES
+var unique = function ( array ) {
+	var uniqueArray = array.filter(function(element,index,array){
+		if(uniqueSoFar(array,index)===true){
+			return true
+		}
+	})
+	return uniqueArray
+}
+
+
+// TEST THE PROGRAM!
+console.log(unique(friends))
