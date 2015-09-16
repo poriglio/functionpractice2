@@ -215,3 +215,40 @@ var twins = function ( array ) {
 
 console.log(twins(testArray))
 
+
+
+
+
+
+
+
+// PROBLEM 9
+
+var booleans1 = [true,true,true,5>2,0===0,1===0]
+var booleans2 = [false,false,false,false]
+var booleans3 = []
+
+// IS THE ARRAY EMPTY?
+var notEmpty = function ( array ) {
+	if ( array.length > 0 ) {
+		return true
+	}
+	else {
+		return false
+	}
+}
+
+// DOES THE ARRAY CONTAIN A TRUE?
+var onlyTrue = function ( array ) {	
+	for(var i = 0; i < array.length; i++){
+		if(array[i]){
+			return true
+		}
+		else if(!array[i] && i===array.length-1){
+			return false
+		}
+	}
+}
+
+
+console.log(onlyTrue(booleans2))
