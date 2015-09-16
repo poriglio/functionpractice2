@@ -196,16 +196,22 @@ var pairTest = function ( array, num ) {
 		}
 };
 
-// TEST ARRAY CONTAINS ONLY PAIRS OF IDENTICAL VALUES
+// TEST WHETHER ARRAY CONTAINS ONLY PAIRS OF IDENTICAL VALUES
 var twins = function ( array ) {
-
+	if(isEven(array)!==true){
+		return false
+	}
+	else{
+		for(var i = 0; i<array.length; i+=2){
+			if(pairTest(array,i)){
+				return true
+			}
+			else if((i===array.length-2)&&(!pairTest(array,i))){
+				return false
+			}
+		}
+	}
 }
 
-
-
-
-
-
-
-
+console.log(twins(testArray))
 
